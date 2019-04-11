@@ -40,3 +40,69 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+
+const myH1 = document.querySelector(".cta-text h1")
+myH1.textContent = siteContent["cta"]["h1"];
+
+const myNav = document.querySelectorAll("nav a")
+myNav.forEach((nav, i)=>{
+  nav.textContent = siteContent["nav"]["nav-item-"+i]
+})
+
+
+const myButton = document.querySelector(".cta-text button")
+myButton.textContent = siteContent["cta"]["button"];
+
+const myImg = document.querySelector("#cta-img")
+myImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+const myNewTopTextH4 = document.querySelectorAll(".top-content .text-content h4")
+myNewTopTextH4[0].textContent = siteContent["main-content"]["features-h4"]
+myNewTopTextH4[1].textContent = siteContent["main-content"]["about-h4"]
+
+const myNewTopText = document.querySelectorAll(".top-content .text-content p")
+myNewTopText[0].textContent = siteContent["main-content"]["features-content"]
+myNewTopText[1].textContent = siteContent["main-content"]["about-content"]
+
+const myMiddleImg = document.getElementById("middle-img")
+myMiddleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+const myNewBottomTextH4 = document.querySelectorAll(".bottom-content .text-content h4")
+myNewBottomTextH4[0].textContent = siteContent["main-content"]["services-h4"]
+myNewBottomTextH4[1].textContent = siteContent["main-content"]["product-h4"]
+myNewBottomTextH4[2].textContent = siteContent["main-content"]["vision-h4"]
+
+const myNewBottomText = document.querySelectorAll(".bottom-content .text-content p")
+myNewBottomText[0].textContent = siteContent["main-content"]["services-content"]
+myNewBottomText[1].textContent = siteContent["main-content"]["product-content"]
+myNewBottomText[2].textContent = siteContent["main-content"]["vision-content"]
+
+const myContactH4 = document.querySelector(".contact h4")
+myContactH4.textContent = siteContent["contact"]["contact-h4"];
+
+const myContactText = document.querySelectorAll(".contact p")
+myContactText[0].textContent = siteContent["contact"]["address"]
+myContactText[1].textContent = siteContent["contact"]["phone"]
+myContactText[2].textContent = siteContent["contact"]["email"]
+
+const myFooter = document.querySelector("footer p")
+myFooter.textContent = siteContent["footer"]["copyright"];
+
+
+
+// myNav.prepend("First Nav Item")
+
+const newNav = document.querySelector("nav")
+const newNavItem = document.createElement("a")
+newNavItem.textContent = "New Nav Item"
+newNav.prepend(newNavItem)
+
+const newNavItem2 = document.createElement("a")
+newNavItem2.textContent = "Another Nav Item"
+newNav.appendChild(newNavItem2)
+
+myNav.forEach(function (element) {
+  element.style.color = 'green'
+})
